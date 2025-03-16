@@ -55,6 +55,10 @@ const changeDirection = (e) => {
         
     
     };
+controls.forEach(key => {
+    // Calling changeDirection on each key click and passing key dataset value as an object
+    key.addEventListener("click", () => changeDirection({ key: key.dataset.key}))
+})
 //Function to update the game state
 const initGame = () => {
     //Stop if game is over
